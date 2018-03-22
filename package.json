@@ -1,7 +1,7 @@
 {
-  "name": "vuejs-template",
+  "name": "Benjamin Garcia Full Stack Developer",
   "version": "1.0.0",
-  "description": "A Vue.js, Vuex, Bootstrap v4 Template",
+  "description": "Full Stack Developer Portfolio Page",
   "author": "Ben Garcia <ben@seebenprogram.com>",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "rm -rf dist && npm run build && cd dist && git init && git add . && git commit -m \"Initial commit\" && git remote add origin git@github.com:BenRGarcia/Portfolio-Page-v2.git && git push --force origin master:gh-pages"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",

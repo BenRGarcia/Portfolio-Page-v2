@@ -1,7 +1,7 @@
 {
-  "name": "Benjamin Garcia Full Stack Developer",
+  "name": "portfolio-page",
   "version": "1.0.0",
-  "description": "Full Stack Developer Portfolio Page",
+  "description": "Benjamin Garcia | Full Stack Developer - Portfolio Page",
   "author": "Ben Garcia <ben@seebenprogram.com>",
   "private": true,
   "scripts": {

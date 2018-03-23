@@ -7,6 +7,7 @@
         :key="index"
         :href="link.href"
         :name="link.name"
+        :icon="link.icon"
       />
     </ul>
   </nav>

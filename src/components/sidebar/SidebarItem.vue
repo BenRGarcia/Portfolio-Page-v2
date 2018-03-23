@@ -5,7 +5,6 @@
     >
     <a
       :class="iconLinkClasses"
-      id="iconLink"
       :href="href"
     >
       <i class="material-icons">{{ icon }}</i>
@@ -42,11 +41,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#iconLink {
-  line-height: 0;
-}
 a {
   color: initial;
+  line-height: 1.0;
+  font-size: 1.2rem;
 }
 a:hover {
   background-color: #ddd;

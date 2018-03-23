@@ -1,22 +1,26 @@
 <template>
-  <!-- 'Container' for entire page -->
-  <div id="app" class="container-fluid">
-    <!-- 'Row' for entire page -->
-    <div class="row">
-      <!-- Navbar for screen sizes 'SMALL' and below -->
-      <div :class="navbarClasses">
-        <Navbar/>
-      </div>
-      <!-- Sidebar for screen sizes 'MEDIUM' and above -->
-      <div :class="sidebarClasses">
-        <Sidebar :class="sidebarLayout"/>
-      </div>
-      <!-- Main Content -->
-      <main :class="mainLayout">
-        <div class="container">
-          <router-view/>
+  <div>
+    <!-- Navbar for screen sizes 'SMALL' and below -->
+    <div :class="navbarClasses">
+      <Navbar/>
+    </div>
+    <!-- 'Container' for entire page -->
+    <div id="app" class="container-fluid">
+      <!-- 'Row' for entire page -->
+      <div class="row">
+        <!-- Sidebar for screen sizes 'MEDIUM' and above -->
+        <div :class="sidebarClasses">
+          <Sidebar :class="sidebarLayout"/>
         </div>
-      </main>
+        <!-- Main Content -->
+        <main :class="mainLayout">
+          <div class="container">
+            <!-- Spacer -->
+            <div :class="divSpacerClasses" style="height: 76px;"></div>
+            <router-view/>
+          </div>
+        </main>
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +34,7 @@ export default {
   data () {
     return {
       navbarClasses: [
-        'col-12', 'd-md-none'
+        'd-md-none', 'bg-secondary', 'mb-2', 'fixed-top'
       ],
       sidebarClasses: [
         'd-none', 'd-md-block'
@@ -38,8 +42,11 @@ export default {
       sidebarLayout: [
         'col-md-4', 'col-lg-3'
       ],
+      divSpacerClasses: [
+        'col-12', 'd-md-none'
+      ],
       mainLayout: [
-        'col-12', 'col-md-8', 'col-lg-9', 'ml-auto'
+        'col-12', 'col-md-8', 'col-lg-9', 'ml-auto', 'pt-5'
       ]
     }
   },

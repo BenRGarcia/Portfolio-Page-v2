@@ -1,26 +1,24 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Benjamin Garcia</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark pl-1">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a id="logo" class="mx-auto py-1 text-center" href="https://benrgarcia.github.io/Portfolio-Page-v2/">
+      Benjamin Garcia<br>
+      <span>Full Stack Developer</span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- Navbar Items -->
+        <NavbarItem
+          v-for="(item, index) in navbarItems"
+          :key="index"
+          :name="item.name"
+          :href="item.href"
+        />
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -32,12 +30,18 @@ export default {
   },
   computed: {
     navbarItems () {
-      return this.$store.getters.getSidebarLinks
+      return this.$store.getters.getNavigationLinks
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+#logo {
+  color: #fff;
+  font-size: 1.1rem;
+}
+#logo:hover {
+  text-decoration: none;
+}
 </style>

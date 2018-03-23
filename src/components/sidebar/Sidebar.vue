@@ -3,7 +3,7 @@
     <Logo/>
     <ul :class="ulClasses">
       <!-- Sidebar links -->
-      <SidebarLargeItem
+      <SidebarItem
         v-for="(link, index) in sidebarLinks"
         :key="index"
         :href="link.href"
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import SidebarLargeItem from './Sidebar-Large-Item'
+import SidebarItem from './SidebarItem'
 import GitHub from '../social/GitHub'
 import Logo from '../logo/Logo'
 
@@ -32,13 +32,13 @@ export default {
     }
   },
   components: {
-    SidebarLargeItem,
+    SidebarItem,
     GitHub,
     Logo
   },
   computed: {
     sidebarLinks () {
-      return this.$store.getters.getSidebarLinks
+      return this.$store.getters.getNavigationLinks
     }
   }
 }

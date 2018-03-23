@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    _sidebarLinks: [
+    _navigationLinks: [
       {
         name: 'Home',
         href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/',
@@ -29,8 +29,8 @@ export const store = new Vuex.Store({
     ]
   },
   getters: {
-    getSidebarLinks (state) {
-      return state._sidebarLinks
+    getNavigationLinks (state) {
+      return state._navigationLinks
     }
   },
   mutations: {},

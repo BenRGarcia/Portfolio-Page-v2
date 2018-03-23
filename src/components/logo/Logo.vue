@@ -13,7 +13,7 @@ export default {
         'p-5'
       ],
       headingClasses: [
-        'h1'
+        'h1', 'mb-0'
       ],
       subheadingClasses: [
         'h6'

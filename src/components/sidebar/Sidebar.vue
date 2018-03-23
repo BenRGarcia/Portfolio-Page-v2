@@ -10,8 +10,8 @@
         :name="link.name"
         :icon="link.icon"
       />
+      <GitHub class="w-75 mx-auto mt-5 mb-3"/>
     </ul>
-    <GitHub class="w-75 mx-auto mb-3"/>
   </nav>
 </template>
 
@@ -27,7 +27,7 @@ export default {
         'bg-light', 'pl-0', 'pr-0', 'd-none', 'd-md-flex', 'flex-column'
       ],
       ulClasses: [
-        'nav', 'nav-pills', 'mb-auto', 'flex-column', 'flex-nowrap'
+        'nav', 'nav-pills', 'flex-column', 'flex-nowrap'
       ]
     }
   },

@@ -30,4 +30,7 @@ a {
   text-decoration: none;
   color: initial;
 }
+img {
+  margin-top: 7rem !important;
+}
 </style>

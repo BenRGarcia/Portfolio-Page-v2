@@ -28,13 +28,13 @@ export default {
   data () {
     return {
       itemClasses: [
-        'nav-item', 'pl-3', 'd-flex', 'align-items-center', 'border'
+        'nav-item', 'pl-3', 'd-flex', 'align-items-center', 'border', 'rounded-right'
       ],
       iconLinkClasses: [
-        'align-items-center'
+        'align-items-center', 'p-3', 'rounded-circle'
       ],
       linkClasses: [
-        'nav-link', 'd-inline-block', 'w-100', 'py-3'
+        'nav-link', 'd-inline-block', 'w-100', 'py-4'
       ]
     }
   }
@@ -47,5 +47,8 @@ export default {
 }
 a {
   color: initial;
+}
+a:hover {
+  background-color: #ddd;
 }
 </style>

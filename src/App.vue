@@ -5,7 +5,9 @@
       <Sidebar :class="sidebarLayout"/>
       <!-- Main Content -->
       <main :class="mainLayout">
-        <router-view/>
+        <div class="container">
+          <router-view/>
+        </div>
       </main>
     </div>
   </div>

@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       itemClasses: [
-        'nav-item', 'pt-2', 'pb-0'
+        'nav-item'
       ],
       linkClasses: [
         'nav-link'

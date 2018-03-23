@@ -1,9 +1,15 @@
 <template>
+  <!-- 'Container' for entire page -->
   <div id="app" class="container-fluid">
+    <!-- 'Row' for entire page -->
     <div class="row">
-      <!-- Sidebar for screen sizes MEDIUM and above -->
-      <div :class="sidebarClassesLarge">
-        <SidebarLarge :class="sidebarLayoutLarge"/>
+      <!-- Navbar for screen sizes 'SMALL' and below -->
+      <div :class="navbarClasses">
+        <Navbar/>
+      </div>
+      <!-- Sidebar for screen sizes 'MEDIUM' and above -->
+      <div :class="sidebarClasses">
+        <Sidebar :class="sidebarLayout"/>
       </div>
       <!-- Main Content -->
       <main :class="mainLayout">
@@ -16,16 +22,20 @@
 </template>
 
 <script>
-import SidebarLarge from './components/sidebar/Sidebar-Large'
+import Navbar from './components/sidebar/Navbar'
+import Sidebar from './components/sidebar/Sidebar'
 
 export default {
   name: 'App',
   data () {
     return {
-      sidebarClassesLarge: [
+      navbarClasses: [
+        'col-12', 'd-md-none'
+      ],
+      sidebarClasses: [
         'd-none', 'd-md-block'
       ],
-      sidebarLayoutLarge: [
+      sidebarLayout: [
         'col-md-4', 'col-lg-3'
       ],
       mainLayout: [
@@ -34,7 +44,8 @@ export default {
     }
   },
   components: {
-    SidebarLarge
+    Navbar,
+    Sidebar
   }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
   <nav :class="sidebarClasses">
+    <Logo/>
     <ul :class="ulClasses">
       <!-- Sidebar links -->
       <SidebarItem
@@ -17,6 +18,7 @@
 <script>
 import SidebarItem from './SidebarItem'
 import GitHub from '../social/GitHub'
+import Logo from '../logo/Logo'
 
 export default {
   data () {
@@ -31,7 +33,8 @@ export default {
   },
   components: {
     SidebarItem,
-    GitHub
+    GitHub,
+    Logo
   },
   computed: {
     sidebarLinks () {

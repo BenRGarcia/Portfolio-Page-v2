@@ -3,6 +3,7 @@
     <li
       :class="itemClasses"
     >
+    <i class="material-icons">{{ icon }}</i>
       <a
         :href="href"
         :class="linkClasses"
@@ -16,15 +17,15 @@
 <script>
 export default {
   props: [
-    'href', 'name'
+    'href', 'name', 'icon'
   ],
   data () {
     return {
       itemClasses: [
-        'nav-item'
+        'nav-item', 'pt-2', 'pb-2', 'd-flex', 'align-items-center'
       ],
       linkClasses: [
-        'nav-link'
+        'nav-link', 'd-inline-block'
       ]
     }
   }

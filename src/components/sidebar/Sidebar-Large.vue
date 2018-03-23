@@ -3,7 +3,7 @@
     <Logo/>
     <ul :class="ulClasses">
       <!-- Sidebar links -->
-      <SidebarItem
+      <SidebarLargeItem
         v-for="(link, index) in sidebarLinks"
         :key="index"
         :href="link.href"
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import SidebarItem from './SidebarItem'
+import SidebarLargeItem from './Sidebar-Large-Item'
 import GitHub from '../social/GitHub'
 import Logo from '../logo/Logo'
 
@@ -32,7 +32,7 @@ export default {
     }
   },
   components: {
-    SidebarItem,
+    SidebarLargeItem,
     GitHub,
     Logo
   },

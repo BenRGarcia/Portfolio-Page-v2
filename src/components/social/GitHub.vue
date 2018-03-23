@@ -1,14 +1,17 @@
 <template>
-  <a
-    :href="href"
-    target="_blank"
-  >
-    <img
-      :src="imageUrl"
-      alt="Octocat"
-      class="img-fluid"
+  <div class="text-center">
+    <a
+      :href="href"
+      target="_blank"
     >
-  </a>
+      <img
+        :src="imageUrl"
+        alt="Octocat"
+        class="img-fluid"
+      >
+      <span>github.com/BenRGarcia</span>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -23,5 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+a {
+  text-decoration: none;
+  color: initial;
+}
 </style>

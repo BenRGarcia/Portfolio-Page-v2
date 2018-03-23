@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       mainClasses: [
-        'col-9'
+        'col-9', 'ml-auto'
       ]
     }
   },

@@ -52,5 +52,7 @@ nav {
   bottom: 0;
   left: 0;
   overflow-y: scroll;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
+              0 2px 10px 0 rgba(0,0,0,0.12);
 }
 </style>

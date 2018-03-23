@@ -8,19 +8,23 @@ export const store = new Vuex.Store({
     _sidebarLinks: [
       {
         name: 'Home',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/'
+        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/',
+        icon: 'home'
       },
       {
         name: 'About',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/about'
+        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/about',
+        icon: 'info'
       },
       {
         name: 'Portfolio',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/portfolio'
+        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/portfolio',
+        icon: 'photo_library'
       },
       {
         name: 'R&eacute;sum&eacute;',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/resume'
+        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/resume',
+        icon: 'picture_as_pdf'
       }
     ]
   },

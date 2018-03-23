@@ -3,7 +3,13 @@
     <li
       :class="itemClasses"
     >
-    <i class="material-icons">{{ icon }}</i>
+    <a
+      :class="iconLinkClasses"
+      id="iconLink"
+      :href="href"
+    >
+      <i class="material-icons">{{ icon }}</i>
+    </a>
       <a
         :href="href"
         :class="linkClasses"
@@ -22,7 +28,10 @@ export default {
   data () {
     return {
       itemClasses: [
-        'nav-item', 'pt-2', 'pb-2', 'd-flex', 'align-items-center'
+        'nav-item', 'py-2', 'pl-3', 'd-flex', 'align-items-center'
+      ],
+      iconLinkClasses: [
+        'align-items-center'
       ],
       linkClasses: [
         'nav-link', 'd-inline-block'
@@ -33,5 +42,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+#iconLink {
+  line-height: 0;
+}
+a {
+  color: initial;
+}
 </style>

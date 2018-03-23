@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       itemClasses: [
-        'nav-item', 'pl-3', 'd-flex', 'align-items-center', 'border', 'rounded-right'
+        'nav-item', 'd-flex', 'align-items-center', 'border', 'rounded-right'
       ],
       iconLinkClasses: [
         'align-items-center', 'p-3', 'rounded-circle'

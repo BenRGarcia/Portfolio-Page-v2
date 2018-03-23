@@ -10,12 +10,13 @@
         :icon="link.icon"
       />
     </ul>
-    <p>Test</p>
+    <GitHub id="contain-github" class="w-50 mx-auto"/>
   </nav>
 </template>
 
 <script>
 import SidebarItem from './SidebarItem'
+import GitHub from '../social/GitHub'
 
 export default {
   data () {
@@ -29,7 +30,8 @@ export default {
     }
   },
   components: {
-    SidebarItem
+    SidebarItem,
+    GitHub
   },
   computed: {
     sidebarLinks () {

@@ -10,6 +10,7 @@
         :icon="link.icon"
       />
     </ul>
+    <p>Test</p>
   </nav>
 </template>
 
@@ -20,10 +21,10 @@ export default {
   data () {
     return {
       sidebarClasses: [
-        'col-3', 'bg-light', 'pl-0', 'pr-0'
+        'bg-light', 'pl-0', 'pr-0', 'd-flex', 'flex-column'
       ],
       ulClasses: [
-        'nav', 'nav-pills', 'flex-column'
+        'nav', 'nav-pills', 'mb-auto', 'flex-column', 'flex-nowrap'
       ]
     }
   },
@@ -39,6 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* Make Sidebar Nav sticky */
 nav {
   position: fixed;
   top: 0;

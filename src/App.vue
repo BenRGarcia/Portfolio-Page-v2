@@ -2,9 +2,9 @@
   <div id="app" class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
-      <Sidebar/>
+      <Sidebar :class="sidebarLayout"/>
       <!-- Main Content -->
-      <main :class="mainClasses">
+      <main :class="mainLayout">
         <router-view/>
       </main>
     </div>
@@ -18,7 +18,10 @@ export default {
   name: 'App',
   data () {
     return {
-      mainClasses: [
+      sidebarLayout: [
+        'col-3'
+      ],
+      mainLayout: [
         'col-9', 'ml-auto'
       ]
     }

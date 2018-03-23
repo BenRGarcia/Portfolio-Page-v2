@@ -28,13 +28,13 @@ export default {
   data () {
     return {
       itemClasses: [
-        'nav-item', 'py-2', 'pl-3', 'd-flex', 'align-items-center'
+        'nav-item', 'pl-3', 'd-flex', 'align-items-center', 'border'
       ],
       iconLinkClasses: [
         'align-items-center'
       ],
       linkClasses: [
-        'nav-link', 'd-inline-block'
+        'nav-link', 'd-inline-block', 'w-100', 'py-3'
       ]
     }
   }

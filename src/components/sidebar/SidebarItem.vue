@@ -7,7 +7,7 @@
         :class="aClasses"
         :href="href"
       >
-        <i class="material-icons">{{ icon }}</i>
+        <i class="material-icons align-middle">{{ icon }}</i>
         <span
           :href="href"
           :class="spanClasses"
@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       liClasses: [
-        'nav-item', 'd-flex', 'border', 'rounded-right', 'w-100', 'align-middle'
+        'nav-item', 'd-flex', 'border', 'rounded-right', 'w-100'
       ],
       aClasses: [
         'w-100'

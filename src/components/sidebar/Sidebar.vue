@@ -10,14 +10,12 @@
         :name="link.name"
         :icon="link.icon"
       />
-      <GitHub class="w-75 mx-auto mt-5 mb-3"/>
     </ul>
   </nav>
 </template>
 
 <script>
 import SidebarItem from './SidebarItem'
-import GitHub from '../social/GitHub'
 import Logo from '../logo/Logo'
 
 export default {
@@ -33,7 +31,6 @@ export default {
   },
   components: {
     SidebarItem,
-    GitHub,
     Logo
   },
   computed: {

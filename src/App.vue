@@ -15,7 +15,7 @@
         <!-- Main Content -->
         <main :class="mainLayout">
           <div class="container">
-            <!-- Spacer -->
+            <!-- Div spacer for small screens (make room for navbar) -->
             <div :class="divSpacerClasses" style="height: 76px;"></div>
             <router-view/>
           </div>

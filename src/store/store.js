@@ -8,22 +8,22 @@ export const store = new Vuex.Store({
     _navigationLinks: [
       {
         name: 'Home',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/',
+        href: '/#/home',
         icon: 'home'
       },
       {
         name: 'About',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/about',
+        href: '/#/about',
         icon: 'info'
       },
       {
         name: 'Portfolio',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/portfolio',
+        href: '/#/portfolio',
         icon: 'photo_library'
       },
       {
         name: 'R&eacute;sum&eacute;',
-        href: 'https://benrgarcia.github.io/Portfolio-Page-v2/#/resume',
+        href: '/#/resume',
         icon: 'picture_as_pdf'
       }
     ]

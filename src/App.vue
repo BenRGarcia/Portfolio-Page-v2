@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import Navbar from './components/sidebar/Navbar'
-import Sidebar from './components/sidebar/Sidebar'
+import Navbar from './components/navigation/Navbar'
+import Sidebar from './components/navigation/Sidebar'
 
 export default {
   name: 'App',

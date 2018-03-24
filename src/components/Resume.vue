@@ -1,10 +1,10 @@
 <template>
-  
+  <p>Resume Test</p>
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
 

@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <div class="align-items-center">
     <li
-      :class="itemClasses"
+      :class="liClasses"
     >
-    <a
-      :class="iconLinkClasses"
-      :href="href"
-    >
-      <i class="material-icons">{{ icon }}</i>
-    </a>
       <a
+        :class="aClasses"
         :href="href"
-        :class="linkClasses"
-        v-html="name"
       >
+        <i class="material-icons">{{ icon }}</i>
+        <span
+          :href="href"
+          :class="spanClasses"
+          v-html="name"
+        >
+        </span>
       </a>
     </li>
   </div>
@@ -26,14 +26,14 @@ export default {
   ],
   data () {
     return {
-      itemClasses: [
-        'nav-item', 'd-flex', 'align-items-center', 'border', 'rounded-right'
+      liClasses: [
+        'nav-item', 'd-flex', 'border', 'rounded-right', 'w-100', 'align-middle'
       ],
-      iconLinkClasses: [
-        'align-items-center', 'p-3', 'rounded-circle'
+      aClasses: [
+        'w-100'
       ],
-      linkClasses: [
-        'nav-link', 'd-inline-block', 'w-100', 'py-4'
+      spanClasses: [
+        'nav-link', 'd-inline-block', 'py-4'
       ]
     }
   }
@@ -45,6 +45,7 @@ a {
   color: initial;
   line-height: 1.0;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 a:hover {
   background-color: #ddd;

@@ -40,13 +40,13 @@ export default {
         'd-none', 'd-md-block'
       ],
       sidebarLayout: [
-        'col-md-4', 'col-lg-3'
+        'col-md-4', 'col-lg-3', 'col-xl-2'
       ],
       divSpacerClasses: [
         'col-12', 'd-md-none'
       ],
       mainLayout: [
-        'col-12', 'col-md-8', 'col-lg-9', 'ml-auto', 'pt-5'
+        'col-12', 'col-md-8', 'col-lg-9', 'col-xl-10', 'ml-auto', 'pt-5'
       ]
     }
   },

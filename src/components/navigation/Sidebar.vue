@@ -10,6 +10,7 @@
         :name="link.name"
         :icon="link.icon"
       />
+      <li><GitHub :class="gitHubClasses"/></li>
     </ul>
   </nav>
 </template>
@@ -17,6 +18,7 @@
 <script>
 import SidebarItem from './SidebarItem'
 import Logo from '../logo/Logo'
+import GitHub from '../social/GitHub'
 
 export default {
   data () {
@@ -26,12 +28,16 @@ export default {
       ],
       ulClasses: [
         'nav', 'nav-pills', 'flex-column', 'flex-nowrap'
+      ],
+      gitHubClasses: [
+        'mx-auto', 'mt-5'
       ]
     }
   },
   components: {
     SidebarItem,
-    Logo
+    Logo,
+    GitHub
   },
   computed: {
     sidebarLinks () {

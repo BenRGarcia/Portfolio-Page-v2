@@ -25,6 +25,11 @@ export const store = new Vuex.Store({
         name: 'R&eacute;sum&eacute;',
         href: '/#/resume',
         icon: 'picture_as_pdf'
+      },
+      {
+        name: 'Contact',
+        href: '/#/contact',
+        icon: 'email'
       }
     ]
   },

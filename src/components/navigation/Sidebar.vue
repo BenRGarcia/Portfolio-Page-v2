@@ -33,7 +33,7 @@ export default {
         'nav', 'nav-pills', 'flex-column', 'flex-nowrap'
       ],
       liClasses: [
-        'nav-item', 'd-flex', 'border', 'w-100'
+        'nav-item', 'd-flex', 'w-100', 'border-bottom'
       ],
       gitHubClasses: [
         'mx-auto', 'mt-4'
@@ -63,5 +63,8 @@ nav {
   overflow-y: scroll;
   box-shadow: 1px 0 5px 0 rgba(0,0,0,0.16),
               1px 0 10px 0 rgba(0,0,0,0.12);
+}
+ul:first-of-type {
+  border-top: 1px solid #dee2e6;
 }
 </style>

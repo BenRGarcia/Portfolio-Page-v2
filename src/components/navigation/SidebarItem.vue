@@ -30,7 +30,7 @@ export default {
         'w-100'
       ],
       spanClasses: [
-        'nav-link', 'd-inline-block', 'py-4'
+        'nav-link', 'd-inline-block', 'py-3', 'pr-0'
       ]
     }
   }

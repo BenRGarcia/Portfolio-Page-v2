@@ -12,11 +12,6 @@ export const store = new Vuex.Store({
         icon: 'home'
       },
       {
-        name: 'About',
-        href: '/#/about',
-        icon: 'info'
-      },
-      {
         name: 'Portfolio',
         href: '/#/portfolio',
         icon: 'photo_library'

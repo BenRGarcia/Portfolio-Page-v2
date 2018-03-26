@@ -1,10 +1,16 @@
 <template>
-  <p>Home Test</p>
+  <div>
+    <Jumbotron/>
+  </div>
 </template>
 
 <script>
-export default {
+import Jumbotron from './jumbotron/Jumbotron'
 
+export default {
+  components: {
+    Jumbotron
+  }
 }
 </script>
 

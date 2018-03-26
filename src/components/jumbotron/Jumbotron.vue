@@ -1,17 +1,20 @@
 <template>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Hi, I'm Ben</h1>
+      <h1 class="display-3" v-html="displayText"></h1>
       <hr class="my-4">
       <p class="lead">Looking for a Full-Stack JavaScript Ninja?</p>
-      <p class="blockquote-footer">I'm your guy...</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  
+  data () {
+    return {
+      displayText: 'Hi,<br>I\'m Ben'
+    }
+  }
 }
 </script>
 

@@ -11,9 +11,6 @@
         :icon="link.icon"
         :liClasses="liClasses"
       />
-      <li>
-        <GitHub :class="gitHubClasses"/>
-      </li>
     </ul>
   </nav>
 </template>

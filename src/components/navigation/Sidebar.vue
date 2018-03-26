@@ -30,7 +30,7 @@ export default {
         'nav', 'nav-pills', 'flex-column', 'flex-nowrap'
       ],
       liClasses: [
-        'nav-item', 'd-flex', 'w-100', 'border-bottom'
+        'nav-item', 'd-flex', 'w-100', 'border-bottom', 'pl-1'
       ],
       gitHubClasses: [
         'mx-auto', 'mt-4'

@@ -22,13 +22,13 @@
 <script>
 export default {
   props: [
-    'href', 'name', 'icon'
+    'href', 'name', 'icon', 'liClasses'
   ],
   data () {
     return {
-      liClasses: [
+      /* liClasses: [
         'nav-item', 'd-flex', 'border', 'w-100'
-      ],
+      ], */
       aClasses: [
         'w-100'
       ],

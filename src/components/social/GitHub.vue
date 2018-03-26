@@ -7,7 +7,7 @@
       <img
         :src="imageUrl"
         alt="Octocat"
-        class="img-fluid"
+        class="img-fluid w-50"
       >
       <span>github.com/BenRGarcia</span>
     </a>
@@ -29,8 +29,5 @@ export default {
 a {
   text-decoration: none;
   color: initial;
-}
-img {
-  margin-top: 7rem !important;
 }
 </style>

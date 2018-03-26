@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       liClasses: [
-        'nav-item', 'd-flex', 'border', 'rounded-right', 'w-100'
+        'nav-item', 'd-flex', 'border', 'w-100'
       ],
       aClasses: [
         'w-100'

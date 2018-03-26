@@ -25,6 +25,11 @@ export const store = new Vuex.Store({
         name: 'Contact',
         href: '/#/contact',
         icon: 'email'
+      },
+      {
+        name: 'GitHub',
+        href: 'https://github.com/BenRGarcia',
+        icon: 'code'
       }
     ]
   },

@@ -9,8 +9,11 @@
         :href="link.href"
         :name="link.name"
         :icon="link.icon"
+        :liClasses="liClasses"
       />
-      <li><GitHub :class="gitHubClasses"/></li>
+      <li>
+        <GitHub :class="gitHubClasses"/>
+      </li>
     </ul>
   </nav>
 </template>
@@ -29,8 +32,11 @@ export default {
       ulClasses: [
         'nav', 'nav-pills', 'flex-column', 'flex-nowrap'
       ],
+      liClasses: [
+        'nav-item', 'd-flex', 'border', 'w-100'
+      ],
       gitHubClasses: [
-        'mx-auto', 'mt-5'
+        'mx-auto', 'mt-4'
       ]
     }
   },

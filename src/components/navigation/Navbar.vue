@@ -1,7 +1,9 @@
 <template>
+  <!-- Navbar wrapper -->
   <nav
     :class="css.class.nav"
   >
+    <!-- Navbar toggle button -->
     <button
       class="navbar-toggler"
       type="button"
@@ -11,11 +13,13 @@
       :aria-controls="id.dropdown"
       :data-target="'#' + id.dropdown"
     >
+      <!-- Navbar toggle icon -->
       <span
         :class="css.class.toggleIcon"
       >
       </span>
     </button>
+    <!-- Navbar Title -->
     <router-link
       to="{ name: 'Home'}"
       id="navbarTitle"
@@ -24,6 +28,7 @@
       Benjamin Garcia<br>
       <span>Full Stack Developer</span>
     </router-link>
+    <!-- Navbar dropdown wrapper -->
     <div
       :class="css.class.dropdown"
       :id="id.dropdown"

@@ -47,8 +47,9 @@ export const store = new Vuex.Store({
   },
   mutations: {},
   actions: {
+    // Collapse navbar whenever a view is mounted
     collapseNavbar (context) {
-      // Collapse navbar whenever a view is mounted
+      // An admittedly 'hackey' workaround
       $('#navbarNavDropdown').collapse('hide')
     }
   }

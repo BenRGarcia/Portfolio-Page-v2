@@ -1,49 +1,44 @@
 <template>
   <div class="align-items-center">
-    <li
+    <router-link
+      :to="href" tag="li"
       :class="liClasses"
     >
       <a
-        :class="aClasses"
+        :class="sidebarItemsClasses.a"
+        :style="sidebarItemsStyles"
         :href="href"
       >
-        <i class="material-icons align-middle">{{ icon }}</i>
+        <i
+          class="material-icons align-middle"
+        >
+          {{ icon }}
+        </i>
         <span
           :href="href"
-          :class="spanClasses"
+          :class="sidebarItemsClasses.span"
           v-html="name"
         >
         </span>
       </a>
-    </li>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   props: [
-    'href', 'name', 'icon', 'liClasses'
-  ],
-  data () {
-    return {
-      aClasses: [
-        'w-100'
-      ],
-      spanClasses: [
-        'nav-link', 'd-inline-block', 'py-3', 'pr-0'
-      ]
-    }
-  }
+    'href',
+    'name',
+    'icon',
+    'liClasses',
+    'sidebarItemsClasses',
+    'sidebarItemsStyles'
+  ]
 }
 </script>
 
 <style lang="scss" scoped>
-a {
-  color: initial;
-  line-height: 1.0;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
 a:hover {
   background-color: #ddd;
 }

@@ -1,23 +1,24 @@
 <template>
   <div class="align-items-center">
     <router-link
-      :to="href" tag="li"
-      :class="liClasses"
+      tag="li"
+      :class="css.class.li"
+      :to="link.href"
     >
       <a
-        :class="sidebarItemsClasses.a"
-        :style="sidebarItemsStyles"
-        :href="href"
+        :class="css.class.a"
+        :style="css.style.a"
+        :href="link.href"
       >
         <i
           class="material-icons align-middle"
         >
-          {{ icon }}
+          {{ link.icon }}
         </i>
         <span
-          :href="href"
-          :class="sidebarItemsClasses.span"
-          v-html="name"
+          :class="css.class.span"
+          :href="link.href"
+          v-html="link.name"
         >
         </span>
       </a>
@@ -28,12 +29,8 @@
 <script>
 export default {
   props: [
-    'href',
-    'name',
-    'icon',
-    'liClasses',
-    'sidebarItemsClasses',
-    'sidebarItemsStyles'
+    'link',
+    'css'
   ]
 }
 </script>

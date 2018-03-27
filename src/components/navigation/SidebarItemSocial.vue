@@ -1,23 +1,23 @@
 <template>
   <div class="align-items-center">
     <li
-      :class="liClasses"
+      :class="css.class.li"
     >
       <a
-        :class="sidebarItemsClasses.a"
-        :style="sidebarItemsStyles"
-        :href="href"
-        :target="sidebarItemsTarget"
+        :class="css.class.a"
+        :style="css.style.a"
+        :href="link.href"
+        :target="link.target"
       >
         <i
           class="material-icons align-middle"
         >
-          {{ icon }}
+          {{ link.icon }}
         </i>
         <span
-          :href="href"
-          :class="sidebarItemsClasses.span"
-          v-html="name"
+          :class="css.class.span"
+          :href="link.href"
+          v-html="link.name"
         >
         </span>
       </a>
@@ -28,13 +28,8 @@
 <script>
 export default {
   props: [
-    'href',
-    'name',
-    'icon',
-    'liClasses',
-    'sidebarItemsClasses',
-    'sidebarItemsStyles',
-    'sidebarItemsTarget'
+    'link',
+    'css'
   ]
 }
 </script>

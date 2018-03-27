@@ -20,18 +20,19 @@ export const store = new Vuex.Store({
         name: 'R&eacute;sum&eacute;',
         href: 'Resume',
         icon: 'picture_as_pdf'
-      },
-      {
-        name: 'Contact',
-        href: 'Contact',
-        icon: 'email'
       }
     ],
     _navigationLinksSocial: [
       {
-        name: 'GitHub',
+        name: 'Contact',
+        href: 'mailto:ben@SeeBenProgram.com?Subject=I%20want%20to%20hire%20you%21',
+        icon: 'email'
+      },
+      {
+        name: 'GitHub: /BenRGarcia',
         href: 'https://github.com/BenRGarcia',
-        icon: 'code'
+        icon: 'code',
+        target: '_blank'
       }
     ]
   },

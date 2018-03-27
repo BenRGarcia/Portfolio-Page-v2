@@ -3,12 +3,11 @@
     <router-link
       tag="li"
       :class="css.class.li"
-      :to="link.href"
+      :to="{ name: link.routerLink}"
     >
       <a
         :class="css.class.a"
         :style="css.style.a"
-        :href="link.href"
       >
         <i
           class="material-icons align-middle"

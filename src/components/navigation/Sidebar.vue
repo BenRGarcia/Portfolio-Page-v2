@@ -86,11 +86,11 @@ export default {
   computed: {
     // These are the sidebar links for internal site navigation
     sidebarLinksInternal () {
-      return this.$store.getters.getNavigationLinksInternal
+      return this.$store.getters['navigation/getNavigationLinksInternal']
     },
     // These are the sidebar links for external site navigation
     sidebarLinksExternal () {
-      return this.$store.getters.getNavigationLinksExternal
+      return this.$store.getters['navigation/getNavigationLinksExternal']
     }
   }
 }

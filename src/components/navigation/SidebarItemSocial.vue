@@ -7,7 +7,7 @@
         :class="sidebarItemsClasses.a"
         :style="sidebarItemsStyles"
         :href="href"
-        target="_blank"
+        :target="sidebarItemsTarget"
       >
         <i
           class="material-icons align-middle"
@@ -33,7 +33,8 @@ export default {
     'icon',
     'liClasses',
     'sidebarItemsClasses',
-    'sidebarItemsStyles'
+    'sidebarItemsStyles',
+    'sidebarItemsTarget'
   ]
 }
 </script>

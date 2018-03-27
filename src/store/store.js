@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import $ from 'jquery'
 
 Vue.use(Vuex)
 
@@ -45,5 +46,10 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {},
-  actions: {}
+  actions: {
+    collapseNavbar (context) {
+      // Collapse navbar whenever a view is mounted
+      $('#navbarNavDropdown').collapse('hide')
+    }
+  }
 })

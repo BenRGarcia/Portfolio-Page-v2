@@ -12,7 +12,7 @@ export default {
     Jumbotron
   },
   mounted: function () {
-    this.$store.dispatch('collapseNavbar')
+    return this.$store.dispatch('collapseNavbar')
   }
 }
 </script>

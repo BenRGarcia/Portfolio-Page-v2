@@ -4,8 +4,11 @@
 
 <script>
 export default {
+  computed: {
+
+  },
   mounted: function () {
-    this.$store.dispatch('collapseNavbar')
+    return this.$store.dispatch('collapseNavbar')
   }
 }
 </script>

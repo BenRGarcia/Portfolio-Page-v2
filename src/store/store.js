@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    _navigationLinks: [
+    _navigationLinksInternal: [
       {
         name: 'Home',
         routerLink: 'Home',
@@ -22,7 +22,7 @@ export const store = new Vuex.Store({
         icon: 'picture_as_pdf'
       }
     ],
-    _navigationLinksSocial: [
+    _navigationLinksExternal: [
       {
         name: 'Contact',
         href: 'mailto:ben@SeeBenProgram.com?Subject=I%20want%20to%20hire%20you%21',
@@ -38,10 +38,10 @@ export const store = new Vuex.Store({
   },
   getters: {
     getNavigationLinksInternal (state) {
-      return state._navigationLinks
+      return state._navigationLinksInternal
     },
     getNavigationLinksExternal (state) {
-      return state._navigationLinksSocial
+      return state._navigationLinksExternal
     }
   },
   mutations: {},

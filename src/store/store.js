@@ -8,17 +8,17 @@ export const store = new Vuex.Store({
     _navigationLinks: [
       {
         name: 'Home',
-        href: 'Home',
+        routerLink: 'Home',
         icon: 'home'
       },
       {
         name: 'Portfolio',
-        href: 'Portfolio',
+        routerLink: 'Portfolio',
         icon: 'photo_library'
       },
       {
         name: 'R&eacute;sum&eacute;',
-        href: 'Resume',
+        routerLink: 'Resume',
         icon: 'picture_as_pdf'
       }
     ],

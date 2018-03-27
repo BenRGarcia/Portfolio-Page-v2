@@ -8,7 +8,6 @@
       <a
         :class="linkClasses"
         v-html="link.name"
-        @click="collapseNavBar"
       >
       </a>
     </router-link>
@@ -31,12 +30,6 @@ export default {
         'nav-link',
         'd-inline-block'
       ]
-    }
-  },
-  methods: {
-    collapseNavBar () {
-      // Still working on solution
-      // return this.$emit.collapseNavBar()
     }
   }
 }

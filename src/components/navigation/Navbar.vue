@@ -1,20 +1,39 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark pl-1">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <nav
+    :class="css.class.nav"
+  >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      :aria-controls="id.dropdown"
+      :data-target="'#' + id.dropdown"
+    >
+      <span
+        :class="css.class.toggleIcon"
+      >
+      </span>
     </button>
-    <a id="logo" class="mx-auto py-1 text-center" href="https://benrgarcia.github.io/Portfolio-Page-v2/">
+    <router-link
+      to="{ name: 'Home'}"
+      id="navbarTitle"
+      :class="css.class.navbarTitle"
+    >
       Benjamin Garcia<br>
       <span>Full Stack Developer</span>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    </router-link>
+    <div
+      :class="css.class.dropdown"
+      :id="id.dropdown"
+    >
       <ul class="navbar-nav">
         <!-- Navbar Items -->
         <NavbarItem
-          v-for="(item, index) in navbarItems"
+          v-for="(link, index) in navbarItems"
           :key="index"
-          :name="item.name"
-          :href="item.href"
+          :link="link"
         />
       </ul>
     </div>
@@ -25,6 +44,35 @@
 import NavbarItem from './NavbarItem'
 
 export default {
+  data () {
+    return {
+      id: {
+        dropdown: 'navbarNavDropdown'
+      },
+      css: {
+        class: {
+          nav: [
+            'navbar',
+            'navbar-expand-lg',
+            'navbar-dark',
+            'pl-1'
+          ],
+          navbarTitle: [
+            'mx-auto',
+            'py-1',
+            'text-center'
+          ],
+          dropdown: [
+            'collapse',
+            'navbar-collapse'
+          ],
+          toggleIcon: [
+            'navbar-toggler-icon'
+          ]
+        }
+      }
+    }
+  },
   components: {
     NavbarItem
   },
@@ -37,11 +85,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#logo {
+#navbarTitle {
   color: #fff;
   font-size: 1.1rem;
 }
-#logo:hover {
+#navbarTitle:hover {
   text-decoration: none;
 }
 </style>

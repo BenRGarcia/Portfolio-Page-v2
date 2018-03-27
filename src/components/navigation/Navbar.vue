@@ -35,7 +35,7 @@
     >
       <ul class="navbar-nav">
         <!-- Navbar Items -->
-        <NavbarItem
+        <NavbarLink
           v-for="(link, index) in navbarItems"
           :key="index"
           :link="link"
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import NavbarItem from './NavbarItem'
+import NavbarLink from './NavbarLink'
 
 export default {
   data () {
@@ -79,7 +79,7 @@ export default {
     }
   },
   components: {
-    NavbarItem
+    NavbarLink
   },
   computed: {
     navbarItems () {

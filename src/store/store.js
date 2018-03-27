@@ -37,10 +37,10 @@ export const store = new Vuex.Store({
     ]
   },
   getters: {
-    getNavigationLinks (state) {
+    getNavigationLinksInternal (state) {
       return state._navigationLinks
     },
-    getNavigationLinksSocial (state) {
+    getNavigationLinksExternal (state) {
       return state._navigationLinksSocial
     }
   },

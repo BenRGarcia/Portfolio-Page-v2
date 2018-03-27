@@ -4,14 +4,14 @@
     <Logo/>
     <ul :class="ulClasses">
       <!-- Sidebar internal site links (using tag: <router-link>) -->
-      <SidebarItem
+      <SidebarLinkInternal
         v-for="(link, id) in sidebarLinksInternal"
         :key="id + '-internal'"
         :link="link"
         :css="css"
       />
-      <!-- Sidebar exernal site links (using tag: <a>) -->
-      <SidebarItemSocial
+      <!-- Sidebar external site links (using tag: <a>) -->
+      <SidebarLinkExternal
         v-for="(link, id) in sidebarLinksExternal"
         :key="id + '-external'"
         :link="link"
@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import SidebarItem from './SidebarItem'
 import Logo from '../logo/Logo'
-import SidebarItemSocial from './SidebarItemSocial'
+import SidebarLinkInternal from './SidebarLinkInternal'
+import SidebarLinkExternal from './SidebarLinkExternal'
 
 export default {
   data () {
@@ -80,17 +80,17 @@ export default {
   },
   components: {
     Logo,
-    SidebarItem,
-    SidebarItemSocial
+    SidebarLinkInternal,
+    SidebarLinkExternal
   },
   computed: {
     // These are the sidebar links for internal site navigation
     sidebarLinksInternal () {
-      return this.$store.getters.getNavigationLinks
+      return this.$store.getters.getNavigationLinksInternal
     },
     // These are the sidebar links for external site navigation
     sidebarLinksExternal () {
-      return this.$store.getters.getNavigationLinksSocial
+      return this.$store.getters.getNavigationLinksExternal
     }
   }
 }

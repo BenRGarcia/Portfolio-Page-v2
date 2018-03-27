@@ -1,30 +1,42 @@
 <template>
   <div>
-    <li
-    :class="itemClasses">
+    <router-link
+      tag='li'
+      :to="{ name: link.routerLink }"
+      :class="itemClasses"
+    >
       <a
-        :href="href"
         :class="linkClasses"
-        v-html="name"
+        v-html="link.name"
+        @click="collapseNavBar"
       >
       </a>
-    </li>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   props: [
-    'href', 'name'
+    'link'
   ],
   data () {
     return {
       itemClasses: [
-        'nav-item', 'pl-2', 'active'
+        'nav-item',
+        'pl-2',
+        'active'
       ],
       linkClasses: [
-        'nav-link', 'd-inline-block'
+        'nav-link',
+        'd-inline-block'
       ]
+    }
+  },
+  methods: {
+    collapseNavBar () {
+      // Still working on solution
+      // return this.$emit.collapseNavBar()
     }
   }
 }

@@ -21,6 +21,7 @@
         :href="link.href"
         :name="link.name"
         :icon="link.icon"
+        :sidebarItemsTarget="link.target"
         :liClasses="liClasses"
         :sidebarItemsClasses="sidebarItemsClasses"
         :sidebarItemsStyles="sidebarItemsStyles"
@@ -71,13 +72,14 @@ export default {
           'nav-link',
           'd-inline-block',
           'py-3',
+          'pl-1',
           'pr-0'
         ]
       },
       sidebarItemsStyles: {
         color: 'initial',
         lineHeight: '1.0',
-        fontSize: '1.2rem',
+        fontSize: '1.1rem',
         textDecoration: 'none'
       }
     }

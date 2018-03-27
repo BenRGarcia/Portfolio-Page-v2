@@ -3,19 +3,19 @@ const state = {
     {
       name: 'Liri',
       description: 'A Node.js command line app that mimics Siri.',
-      imgUrl: '../../assets/images/portfolio/vue.png',
+      src: require('../../assets/images/portfolio/vue.png'),
       href: 'https://github.com/BenRGarcia/liri-node-app'
     },
     {
       name: 'Miri',
       description: 'A Node.js command line app that mimics Siri.',
-      imgUrl: '../../assets/images/portfolio/vue.png',
+      src: require('../../assets/images/portfolio/vue.png'),
       href: 'https://github.com/BenRGarcia/liri-node-app'
     },
     {
       name: 'Niri',
       description: 'A Node.js command line app that mimics Siri.',
-      imgUrl: '../../assets/images/portfolio/vue.png',
+      src: require('../../assets/images/portfolio/vue.png'),
       href: 'https://github.com/BenRGarcia/liri-node-app'
     }
   ]

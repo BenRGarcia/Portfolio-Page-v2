@@ -59,10 +59,6 @@ export default {
         'border-bottom',
         'pl-1'
       ],
-      gitHubClasses: [
-        'mx-auto',
-        'mt-4'
-      ],
       sidebarItemsClasses: {
         a: [
           'w-100',

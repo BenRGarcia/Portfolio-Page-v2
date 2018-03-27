@@ -10,6 +10,9 @@ import Jumbotron from './jumbotron/Jumbotron'
 export default {
   components: {
     Jumbotron
+  },
+  mounted: function () {
+    this.$store.dispatch('collapseNavbar')
   }
 }
 </script>

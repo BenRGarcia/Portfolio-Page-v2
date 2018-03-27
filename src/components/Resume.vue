@@ -4,7 +4,10 @@
 
 <script>
 export default {
-
+  mounted: function () {
+    console.log(`Home page mounted`)
+    this.$store.dispatch('collapseNavbar')
+  }
 }
 </script>
 

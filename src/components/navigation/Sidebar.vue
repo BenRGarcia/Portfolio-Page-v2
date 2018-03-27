@@ -3,28 +3,19 @@
     <!-- Logo -->
     <Logo/>
     <ul :class="ulClasses">
-      <!-- Sidebar links -->
+      <!-- Sidebar internal site links (using tag: <router-link>) -->
       <SidebarItem
-        v-for="(link, id) in sidebarLinks"
-        :key="id"
-        :href="link.href"
-        :name="link.name"
-        :icon="link.icon"
-        :liClasses="liClasses"
-        :sidebarItemsClasses="sidebarItemsClasses"
-        :sidebarItemsStyles="sidebarItemsStyles"
+        v-for="(link, id) in sidebarLinksInternal"
+        :key="id + '-internal'"
+        :link="link"
+        :css="css"
       />
-      <!-- Sidebar Social links -->
+      <!-- Sidebar exernal site links (using tag: <a>) -->
       <SidebarItemSocial
-        v-for="(link, id) in sidebarLinksSocial"
-        :key="id + '-social'"
-        :href="link.href"
-        :name="link.name"
-        :icon="link.icon"
-        :sidebarItemsTarget="link.target"
-        :liClasses="liClasses"
-        :sidebarItemsClasses="sidebarItemsClasses"
-        :sidebarItemsStyles="sidebarItemsStyles"
+        v-for="(link, id) in sidebarLinksExternal"
+        :key="id + '-external'"
+        :link="link"
+        :css="css"
       />
     </ul>
   </nav>
@@ -52,31 +43,38 @@ export default {
         'flex-column',
         'flex-nowrap'
       ],
-      liClasses: [
-        'nav-item',
-        'd-flex',
-        'w-100',
-        'border-bottom',
-        'pl-1'
-      ],
-      sidebarItemsClasses: {
-        a: [
-          'w-100',
-          'sidebar-link'
-        ],
-        span: [
-          'nav-link',
-          'd-inline-block',
-          'py-3',
-          'pl-1',
-          'pr-0'
-        ]
-      },
-      sidebarItemsStyles: {
-        color: 'initial',
-        lineHeight: '1.0',
-        fontSize: '1.1rem',
-        textDecoration: 'none'
+      // CSS object passed to children
+      css: {
+        // CSS Classes
+        class: {
+          li: [
+            'nav-item',
+            'd-flex',
+            'w-100',
+            'border-bottom',
+            'pl-1'
+          ],
+          a: [
+            'w-100',
+            'sidebar-link'
+          ],
+          span: [
+            'nav-link',
+            'd-inline-block',
+            'py-3',
+            'pl-1',
+            'pr-0'
+          ]
+        },
+        // CSS Styles
+        style: {
+          a: {
+            color: 'initial',
+            lineHeight: '1.0',
+            fontSize: '1.1rem',
+            textDecoration: 'none'
+          }
+        }
       }
     }
   },
@@ -86,10 +84,12 @@ export default {
     SidebarItemSocial
   },
   computed: {
-    sidebarLinks () {
+    // These are the sidebar links for internal site navigation
+    sidebarLinksInternal () {
       return this.$store.getters.getNavigationLinks
     },
-    sidebarLinksSocial () {
+    // These are the sidebar links for external site navigation
+    sidebarLinksExternal () {
       return this.$store.getters.getNavigationLinksSocial
     }
   }

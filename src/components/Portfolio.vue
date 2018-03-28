@@ -1,14 +1,11 @@
 <template>
   <div class="row">
-    <div
-      :class="css.class.project"
-    >
     <PortfolioProject
       v-for="(project, index) in projects"
       :key="index"
       :project="project"
+      :class="css.class.project"
     />
-    </div>
   </div>
 </template>
 
@@ -22,7 +19,7 @@ export default {
         class: {
           project: [
             'col-12',
-            'col-md-6',
+            'col-lg-6',
             'col-xl-4'
           ]
         }

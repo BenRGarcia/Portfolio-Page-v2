@@ -17,6 +17,42 @@ const state = {
       description: 'A Node.js command line app that mimics Siri.',
       src: require('../../assets/images/portfolio/vue.png'),
       href: 'https://github.com/BenRGarcia/liri-node-app'
+    },
+    {
+      name: 'Miri',
+      description: 'A Node.js command line app that mimics Siri.',
+      src: require('../../assets/images/portfolio/vue.png'),
+      href: 'https://github.com/BenRGarcia/liri-node-app'
+    },
+    {
+      name: 'Miri',
+      description: 'A Node.js command line app that mimics Siri.',
+      src: require('../../assets/images/portfolio/vue.png'),
+      href: 'https://github.com/BenRGarcia/liri-node-app'
+    },
+    {
+      name: 'Miri',
+      description: 'A Node.js command line app that mimics Siri.',
+      src: require('../../assets/images/portfolio/vue.png'),
+      href: 'https://github.com/BenRGarcia/liri-node-app'
+    },
+    {
+      name: 'Miri',
+      description: 'A Node.js command line app that mimics Siri.',
+      src: require('../../assets/images/portfolio/vue.png'),
+      href: 'https://github.com/BenRGarcia/liri-node-app'
+    },
+    {
+      name: 'Miri',
+      description: 'A Node.js command line app that mimics Siri.',
+      src: require('../../assets/images/portfolio/vue.png'),
+      href: 'https://github.com/BenRGarcia/liri-node-app'
+    },
+    {
+      name: 'Miri',
+      description: 'A Node.js command line app that mimics Siri.',
+      src: require('../../assets/images/portfolio/vue.png'),
+      href: 'https://github.com/BenRGarcia/liri-node-app'
     }
   ]
 }

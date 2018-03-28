@@ -1,16 +1,39 @@
 <template>
-  <div><!-- Don't delete this, it's required to receive CSS column from parent component-->
-    <div class="card mb-4">
-      <div>
-        <img class="card-img-top" :src="project.src" :alt="imgAlt">
+  <div><!-- Don't delete this div, CSS grid/col received from parent component-->
+    <!-- Bootstrap v4 Card -->
+    <div
+      class="card mb-4"
+    >
+      <!-- Card image header -->
+      <div
+        :style="css.style.img"
+      >
+        <img
+          class="card-img-top"
+          :src="project.src"
+          :alt="imgAlt"
+        >
       </div>
+      <!-- Card body -->
       <div class="card-body">
-        <h5 class="card-title">{{ project.name }}</h5>
-        <p class="card-text">{{ project.description }}</p>
-        <a href="#" target="_blank" class="btn btn-danger">GitHub</a>
+        <h5 class="card-title">
+          {{ project.name }}
+        </h5>
+        <p class="card-text">
+          {{ project.description }}
+        </p>
+        <!-- Link to Project-Specific GitHub Repo -->
+        <div class="text-right">
+          <a
+            :href="project.href"
+            target="_blank"
+          >
+            <i class="material-icons">link</i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </div><!-- Don't delete this div, CSS grid/col received from parent component-->
 </template>
 
 <script>
@@ -22,10 +45,11 @@ export default {
     return {
       imgAlt: 'Portfolio Project Cover Image',
       css: {
-        class: {
-          card: [],
-          cardImg: [],
-          cardBody: []
+        style: {
+          img: {
+            height: '225px',
+            overflow: 'hidden'
+          }
         }
       }
     }

@@ -16,7 +16,7 @@
       </div>
       <!-- Card body -->
       <div
-        class="card-body pb-1"
+        class="card-body pb-1 position-relative"
       >
         <h5
           class="card-title"
@@ -24,19 +24,20 @@
           {{ project.name }}
         </h5>
         <p
-          class="card-text mb-0"
+          class="card-text"
         >
           {{ project.description }}
         </p>
         <!-- Link to Project-Specific GitHub Repo -->
         <div
-          class="text-right"
+          class="position-absolute"
+          :style="css.style.link"
         >
           <a
             :href="project.href"
             target="_blank"
           >
-            <i class="material-icons align-top">link</i>
+            <i class="material-icons">link</i>
           </a>
         </div>
       </div>
@@ -57,6 +58,10 @@ export default {
           img: {
             height: '200px',
             overflow: 'hidden'
+          },
+          link: {
+            top: 0,
+            right: '6px'
           }
         }
       }

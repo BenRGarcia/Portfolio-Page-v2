@@ -1,10 +1,20 @@
 <template>
-    <div id="img-wrapper" class="mx-auto">
+    <div
+      id="img-wrapper"
+      class="mx-auto"
+    >
       <img
         :src="resumeSrc"
         :alt="imgAlt"
-        class="img-fluid mx-auto d-block"
+        class="img-fluid"
       >
+      <a :href="pdf" download="Resume_Benjamin_R_Garcia.pdf">
+        <i
+          class="material-icons"
+        >
+          file_download
+        </i>
+      </a>
     </div>
 </template>
 
@@ -12,8 +22,17 @@
 export default {
   data () {
     return {
-      resumeSrc: require('../assets/images/docs/Resume.png'),
-      imgAlt: 'Image of Resume Text Document'
+      resumeSrc: '/static/documents/Resume.png',
+      imgAlt: 'Image of Resume Text Document',
+      pdf: '/static/documents/Resume.pdf',
+      css: {
+        style: {
+          i: {
+            bottom: '25px',
+            right: '25px'
+          }
+        }
+      }
     }
   },
   mounted: function () {
@@ -23,6 +42,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  color: #000;
+}
+i {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+}
 #img-wrapper {
   max-width: 1100px;
 }

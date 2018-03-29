@@ -15,20 +15,28 @@
         >
       </div>
       <!-- Card body -->
-      <div class="card-body">
-        <h5 class="card-title">
+      <div
+        class="card-body pb-1"
+      >
+        <h5
+          class="card-title"
+        >
           {{ project.name }}
         </h5>
-        <p class="card-text">
+        <p
+          class="card-text mb-0"
+        >
           {{ project.description }}
         </p>
         <!-- Link to Project-Specific GitHub Repo -->
-        <div class="text-right">
+        <div
+          class="text-right"
+        >
           <a
             :href="project.href"
             target="_blank"
           >
-            <i class="material-icons">link</i>
+            <i class="material-icons align-top">link</i>
           </a>
         </div>
       </div>

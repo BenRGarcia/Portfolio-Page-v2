@@ -55,7 +55,7 @@ export default {
       css: {
         style: {
           img: {
-            height: '225px',
+            height: '200px',
             overflow: 'hidden'
           }
         }

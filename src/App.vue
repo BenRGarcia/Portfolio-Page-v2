@@ -53,19 +53,19 @@ export default {
   data () {
     return {
       navbarClasses: [
-        'd-md-none', 'bg-secondary', 'mb-2', 'fixed-top'
+        'd-lg-none', 'bg-secondary', 'mb-2', 'fixed-top'
       ],
       sidebarClasses: [
-        'd-none', 'd-md-block'
+        'd-none', 'd-lg-block'
       ],
       sidebarLayout: [
-        'col-md-4', 'col-lg-3', 'col-xl-2'
+        'col-lg-3', 'col-xl-2'
       ],
       divSpacerClasses: [
-        'col-12', 'd-md-none'
+        'col-12', 'd-lg-none'
       ],
       mainLayout: [
-        'col-12', 'col-md-8', 'col-lg-9', 'col-xl-10', 'ml-auto', 'pt-5'
+        'col-12', 'col-lg-9', 'col-xl-10', 'ml-auto', 'pt-5'
       ]
     }
   },

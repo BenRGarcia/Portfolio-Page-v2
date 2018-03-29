@@ -4,11 +4,14 @@
       class="mx-auto"
     >
       <img
-        :src="resumeSrc"
+        :src="imgSrc"
         :alt="imgAlt"
         class="img-fluid"
       >
-      <a :href="pdf" download="Resume_Benjamin_R_Garcia.pdf">
+      <a
+        :href="pdfFile"
+        :download="suggestedFileName"
+      >
         <i
           class="material-icons"
         >
@@ -22,17 +25,10 @@
 export default {
   data () {
     return {
-      resumeSrc: '/static/documents/Resume.png',
+      imgSrc: '/static/documents/Resume.png',
       imgAlt: 'Image of Resume Text Document',
-      pdf: '/static/documents/Resume.pdf',
-      css: {
-        style: {
-          i: {
-            bottom: '25px',
-            right: '25px'
-          }
-        }
-      }
+      pdfFile: '/static/documents/Resume.pdf',
+      suggestedFileName: 'Resume_Benjamin_R_Garcia.pdf'
     }
   },
   mounted: function () {
@@ -53,11 +49,14 @@ i {
   padding: 10px;
   border-radius: 50%;
 }
+i:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
 #img-wrapper {
   max-width: 1100px;
 }
 img {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  box-shadow: 0 4px  8px 0 rgba(0, 0, 0, 0.2),
               0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>

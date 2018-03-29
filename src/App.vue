@@ -1,22 +1,41 @@
 <template>
   <div>
     <!-- Navbar for screen sizes 'SMALL' and below -->
-    <div :class="navbarClasses">
+    <div
+      :class="navbarClasses"
+    >
       <Navbar/>
     </div>
     <!-- 'Container' for entire page -->
-    <div id="app" class="container-fluid">
+    <div
+      id="app"
+      class="container-fluid"
+    >
       <!-- 'Row' for entire page -->
-      <div class="row">
+      <div
+        class="row"
+      >
         <!-- Sidebar for screen sizes 'MEDIUM' and above -->
-        <div :class="sidebarClasses">
+        <div
+          :class="sidebarClasses"
+        >
           <Sidebar :class="sidebarLayout"/>
         </div>
         <!-- Main Content -->
-        <main :class="mainLayout">
-          <div class="container">
-            <!-- Div spacer for small screens (make room for navbar) -->
-            <div :class="divSpacerClasses" style="height: 76px;"></div>
+        <main
+          :class="mainLayout"
+        >
+          <div
+            class="container"
+          >
+            <!-- Div spacer for small screens (to make room for navbar) -->
+            <div
+              data-purpose="Div spacer for navbar"
+              :class="divSpacerClasses"
+              style="height: 60px;"
+            >
+            </div>
+            <!-- All pages go through router -->
             <router-view/>
           </div>
         </main>

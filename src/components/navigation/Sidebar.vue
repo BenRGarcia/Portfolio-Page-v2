@@ -99,6 +99,7 @@ export default {
 <style lang="scss" scoped>
 /* Make Sidebar Nav sticky */
 nav {
+  z-index: 2;
   position: fixed;
   top: 0;
   bottom: 0;

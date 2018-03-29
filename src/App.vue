@@ -59,7 +59,7 @@ export default {
         'col-12', 'd-lg-none'
       ],
       mainLayout: [
-        'col-12', 'col-lg-9', 'col-xl-10', 'ml-auto', 'pt-5'
+        'col-12', 'col-lg-9', 'col-xl-10', 'ml-auto', 'py-4'
       ]
     }
   },

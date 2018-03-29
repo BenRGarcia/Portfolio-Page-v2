@@ -25,16 +25,10 @@
         <main
           :class="mainLayout"
         >
+          <!-- 'Container' for all router views -->
           <div
             class="container-fluid"
           >
-            <!-- Div spacer for small screens (to make room for navbar) -->
-            <div
-              data-purpose="Div spacer for navbar"
-              :class="divSpacerClasses"
-              style="height: 60px;"
-            >
-            </div>
             <!-- All pages go through router -->
             <router-view/>
           </div>
@@ -53,7 +47,7 @@ export default {
   data () {
     return {
       navbarClasses: [
-        'd-lg-none', 'bg-secondary', 'mb-2', 'fixed-top'
+        'd-lg-none', 'bg-secondary', 'mb-2'
       ],
       sidebarClasses: [
         'd-none', 'd-lg-block'

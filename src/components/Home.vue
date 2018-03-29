@@ -5,7 +5,7 @@
       <div class="col-12">
         <Jumbotron/>
       </div>
-      <!-- Container -->
+      <!-- Container for 'Skills' -->
       <div class="container">
         <!-- Card container for dev tools -->
         <div class="card" style="border-radius: 20px!important;">
@@ -20,6 +20,20 @@
                 :key="id"
                 :tool="tool"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Container for 'Dedication' -->
+      <div class="container">
+        <!-- Card container for dev tools -->
+        <div class="card" style="border-radius: 20px!important;">
+          <div class="card-header pl-4">
+            <h2 class="mb-0">Dedication</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <!-- Chart of Hours Studied by Month -->
             </div>
           </div>
         </div>
@@ -79,6 +93,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  margin-bottom: 15px;
   border: 2px solid #ff0000;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.15),
               6px 8px 18px 0 rgba(0, 0, 0, 0.1);

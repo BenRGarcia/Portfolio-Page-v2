@@ -26,7 +26,7 @@
           :class="mainLayout"
         >
           <div
-            class="container"
+            class="container-fluid"
           >
             <!-- Div spacer for small screens (to make room for navbar) -->
             <div

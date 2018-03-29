@@ -14,7 +14,7 @@ const state = {
     {
       name: 'R&eacute;sum&eacute;',
       routerLink: 'Resume',
-      icon: 'picture_as_pdf'
+      icon: 'insert_drive_file'
     }
   ],
   _navigationLinksExternal: [

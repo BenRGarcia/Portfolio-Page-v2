@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Navbar for screen sizes 'SMALL' and below -->
+    <!-- Navbar for smaller screen sizes  -->
     <div
       :class="navbarClasses"
     >
@@ -15,11 +15,13 @@
       <div
         class="row"
       >
-        <!-- Sidebar for screen sizes 'MEDIUM' and above -->
+        <!-- Sidebar for larger screen -->
         <div
           :class="sidebarClasses"
         >
-          <Sidebar :class="sidebarLayout"/>
+          <Sidebar
+            :class="sidebarLayout"
+          />
         </div>
         <!-- Main Content -->
         <main
@@ -47,19 +49,25 @@ export default {
   data () {
     return {
       navbarClasses: [
-        'd-lg-none', 'bg-secondary', 'mb-2'
+        'd-lg-none',
+        'bg-secondary',
+        'mb-2'
       ],
       sidebarClasses: [
-        'd-none', 'd-lg-block'
+        'd-none',
+        'd-lg-block'
       ],
       sidebarLayout: [
-        'col-lg-3', 'col-xl-2'
-      ],
-      divSpacerClasses: [
-        'col-12', 'd-lg-none'
+        'col-lg-3',
+        'col-xl-2'
       ],
       mainLayout: [
-        'col-12', 'col-lg-9', 'col-xl-10', 'ml-auto', 'py-4'
+        'col-12',
+        'col-lg-9',
+        'col-xl-10',
+        'ml-auto',
+        'py-4',
+        'px-0'
       ]
     }
   },

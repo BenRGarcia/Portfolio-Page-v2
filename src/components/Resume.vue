@@ -1,14 +1,19 @@
 <template>
-  <iframe
-    :src="googleDocSrc">
-  </iframe>
+    <div id="img-wrapper" class="mx-auto">
+      <img
+        :src="resumeSrc"
+        :alt="imgAlt"
+        class="img-fluid mx-auto d-block"
+      >
+    </div>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      googleDocSrc: 'https://docs.google.com/document/d/e/2PACX-1vRUxGTi7SuTagw9LYU-b0cgNl8EYOjAR7OHGDMxlTDTLwk89xtwhuzNJDw65ByMSySqjE1cIhfUVwPH/pub?embedded=true'
+      resumeSrc: require('../assets/images/docs/Resume.png'),
+      imgAlt: 'Image of Resume Text Document'
     }
   },
   mounted: function () {
@@ -18,12 +23,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-iframe {
-  width: 100%;
-  height: 80vh;
-  border-width: 2px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
+#img-wrapper {
+  max-width: 1100px;
+}
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>

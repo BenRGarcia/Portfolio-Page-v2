@@ -2,7 +2,7 @@ const state = {
   _projects: [
     {
       name: 'Liri',
-      description: 'A Node.js command line app that mimics Siri. A Node.js command line app that mimics Siri.',
+      description: 'A Node.js command line app that mimics Siri.',
       src: require('../../assets/images/portfolio/vue.png'),
       href: 'https://github.com/BenRGarcia/liri-node-app'
     },

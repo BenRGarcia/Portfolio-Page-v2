@@ -25,9 +25,9 @@
 export default {
   data () {
     return {
-      imgSrc: require('/static/documents/Resume.png'),
+      imgSrc: require('../../static/documents/Resume.png'),
       imgAlt: 'Image of Resume Text Document',
-      pdfFile: require('/static/documents/Resume.pdf'),
+      pdfFile: require('../../static/documents/Resume.pdf'),
       suggestedFileName: 'Resume_Benjamin_R_Garcia.pdf'
     }
   },

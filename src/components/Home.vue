@@ -18,21 +18,54 @@
     <div
       class="container"
     >
-      <DedicationCard/>
+      <!-- <DedicationCard/> -->
     </div>
+    <!--========================-->
+    <!-- Test area for carousel -->
+    <!--========================-->
+    <div
+      class="container"
+    >
+      <!-- Bootstrap Carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!-- Hard Coded Carousel Images :-( -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" :src="months.January" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" :src="months.February" alt="Second slide">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--========================-->
+    <!-- Test area for carousel -->
+    <!--========================-->
   </div>
 </template>
 
 <script>
 import Jumbotron from './jumbotron/Jumbotron'
 import SkillsCard from './skills/SkillsCard'
-import DedicationCard from './dedication/DedicationCard'
+// import DedicationCard from './dedication/DedicationCard'
+import Carousel from './carousel/Carousel'
 
 export default {
+  data () {
+    return {
+      dataTarget: '#carousel-img',
+      months: {
+        January: require('../assets/toggl/2018-01_1134x533.png'),
+        February: require('../assets/toggl/2018-02_1134x533.png')
+      }
+    }
+  },
   components: {
     Jumbotron,
     SkillsCard,
-    DedicationCard
+    // DedicationCard,
+    Carousel
   },
   mounted: function () {
     return this.$store.dispatch('collapseNavbar')
@@ -46,5 +79,9 @@ export default {
   border: 2px solid #ff0000;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.15),
               6px 8px 18px 0 rgba(0, 0, 0, 0.10);
+}
+#carouselExampleIndicators {
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.15),
+              6px 8px 18px 0 rgba(0, 0, 0, 0.30);
 }
 </style>

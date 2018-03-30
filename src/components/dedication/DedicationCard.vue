@@ -43,4 +43,10 @@ export default {
 .card {
   border-radius: 20px;
 }
+.card-body {
+  height: 500px;
+}
+.row {
+  height: 500px;
+}
 </style>

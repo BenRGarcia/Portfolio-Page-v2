@@ -4,11 +4,8 @@
       <img
         :src="month.src"
         :alt="month.name"
+        class="d-block w-100 active"
       >
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{ month.name }}</h5>
-        <p>Monthly Hours of Coding</p>
-      </div>
     </div>
 </template>
 

@@ -1,10 +1,10 @@
 const state = {
   _months: [
     {
-      month: 'January',
+      month: 'January 2018',
       src: require('../../assets/toggl/2018-01_1134x533.png')
     }, {
-      month: 'February',
+      month: 'February 2018',
       src: require('../../assets/toggl/2018-02_1134x533.png')
     }
   ]

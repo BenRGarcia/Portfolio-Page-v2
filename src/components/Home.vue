@@ -18,7 +18,7 @@
     <div
       class="container"
     >
-      <!-- Carousel goes here -->
+      <DedicationCard/>
     </div>
   </div>
 </template>
@@ -26,11 +26,13 @@
 <script>
 import Jumbotron from './jumbotron/Jumbotron'
 import SkillsCard from './skills/SkillsCard'
+import DedicationCard from './dedication/DedicationCard'
 
 export default {
   components: {
     Jumbotron,
-    SkillsCard
+    SkillsCard,
+    DedicationCard
   },
   mounted: function () {
     return this.$store.dispatch('collapseNavbar')

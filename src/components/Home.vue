@@ -1,19 +1,24 @@
 <template>
-  <div>
-    <div class="row">
-      <!-- Jumbotron -->
-      <div class="col-12">
-        <Jumbotron/>
-      </div>
-      <!-- Container for 'Skills' -->
-      <div class="container">
-        <!-- Images of Tools -->
-        <SkillsCard/>
-      </div>
-      <!-- Container for 'Dedication' -->
-      <div class="container">
-        <!-- Carousel goes here -->
-      </div>
+  <div
+    class="row"
+  >
+    <!-- Jumbotron -->
+    <div
+      class="col-12"
+    >
+      <Jumbotron/>
+    </div>
+    <!-- Container for 'Skills' -->
+    <div
+      class="container"
+    >
+      <SkillsCard/>
+    </div>
+    <!-- Container for 'Dedication' -->
+    <div
+      class="container"
+    >
+      <!-- Carousel goes here -->
     </div>
   </div>
 </template>
@@ -26,14 +31,6 @@ export default {
   components: {
     Jumbotron,
     SkillsCard
-  },
-  data () {
-    return {
-      // stuff
-    }
-  },
-  computed: {
-    getTools: () => this.$store.getters['tools/getTools']
   },
   mounted: function () {
     return this.$store.dispatch('collapseNavbar')

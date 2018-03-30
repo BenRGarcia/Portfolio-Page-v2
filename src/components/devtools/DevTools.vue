@@ -6,7 +6,7 @@
       <div class="card-header text-center">
         <h5 class="mb-0">{{ tool.name }}</h5>
       </div>
-      <div class="card-body pb-1">
+      <div class="card-body pb-1 px-2">
         <div id="imgWrapper" class="text-center">
           <img
             :src="tool.src"

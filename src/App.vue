@@ -32,7 +32,10 @@
             class="container-fluid"
           >
             <!-- All pages go through router -->
-            <router-view/>
+            <router-view
+              :cssChildBanner="cssChildBanner"
+              :hideOnSmall="sidebarClasses"
+            />
           </div>
         </main>
       </div>
@@ -51,7 +54,7 @@ export default {
       navbarClasses: [
         'd-lg-none',
         'bg-secondary',
-        'mb-2'
+        'mb-3'
       ],
       sidebarClasses: [
         'd-none',
@@ -66,9 +69,17 @@ export default {
         'col-lg-9',
         'col-xl-10',
         'ml-auto',
-        'py-4',
+        'pb-4',
         'px-0'
-      ]
+      ],
+      /* CSS passed down to child component page banners */
+      cssChildBanner: {
+        marginBottom: '15px',
+        padding: '25px',
+        backgroundColor: 'red',
+        color: 'white',
+        width: '100%'
+      }
     }
   },
   components: {

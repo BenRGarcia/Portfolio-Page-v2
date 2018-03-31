@@ -75,7 +75,7 @@ export default {
       /* CSS passed down to child component page banners */
       cssChildBanner: {
         marginBottom: '15px',
-        padding: '25px',
+        padding: '30px',
         backgroundColor: 'red',
         color: 'white',
         width: '100%'

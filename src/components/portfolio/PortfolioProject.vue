@@ -6,7 +6,7 @@
     >
       <!-- Card image header -->
       <div
-        :style="css.style.img"
+        :style="css.style.imgWrapper"
       >
         <img
           class="card-img-top"
@@ -30,8 +30,7 @@
         </p>
         <!-- Link to Project-Specific GitHub Repo -->
         <div
-          class="position-absolute"
-          :style="css.style.link"
+          :style="css.style.linkWrapper"
         >
           <a
             :href="project.href"
@@ -55,11 +54,14 @@ export default {
       imgAlt: 'Portfolio Project Cover Image',
       css: {
         style: {
-          img: {
+          /* Uniform height of card image header */
+          imgWrapper: {
             height: '200px',
             overflow: 'hidden'
           },
-          link: {
+          /* Position Link Button */
+          linkWrapper: {
+            position: 'absolute',
             top: 0,
             right: '6px'
           }

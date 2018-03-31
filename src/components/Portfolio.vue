@@ -1,11 +1,17 @@
 <template>
-  <div class="container">
-    <div class="row">
+  <!-- Portfolio Project Section -->
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+    >
+      <!-- Projects Append Here -->
       <PortfolioProject
         v-for="(project, index) in projects"
         :key="index"
         :project="project"
-        :class="css.class.project"
+        :class="css.class.grid"
       />
     </div>
   </div>
@@ -19,7 +25,7 @@ export default {
     return {
       css: {
         class: {
-          project: [
+          grid: [
             'col-12',
             'col-md-6',
             'col-xl-4'

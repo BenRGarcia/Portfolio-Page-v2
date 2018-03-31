@@ -95,7 +95,12 @@ a {
   color: initial;
   text-decoration: none;
 }
-a:hover {
+li:hover {
   background-color: #ddd;
+}
+/* When route is active */
+.router-link-active {
+  border-left: 3px solid red;
+  background-color: #eee;
 }
 </style>

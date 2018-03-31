@@ -1,14 +1,28 @@
 <template>
-  <div :class="logoClasses">
-    <img :src="imgUrl" :alt="imgAlt" :class="profileImageClasses">
-    <h2 :class="headingClasses">Benjamin<br>Garcia</h2>
-    <span :class="subheadingClasses">Full Stack Developer</span>
-    <small
-      class="border-top"
+  <div
+    class="p-3"
+  >
+    <img
+      :src="imgSrc"
+      :alt="imgAlt"
+      class="img-fluid rounded-circle profile-img"
     >
-    <a href="mailto:ben@SeeBenProgram.com?Subject=I%20want%20to%20hire%20you%21">
-      ben@SeeBenProgram.com
-    </a>
+    <h2
+      class="h1 mb-2 mt-3"
+      v-html="name"
+    >
+    </h2>
+    <span
+      class="h5 border-bottom"
+    >
+      {{ title }}
+    </span>
+    <small>
+      <a
+        :href="mailto"
+      >
+        {{ emailAddr }}
+      </a>
     </small>
   </div>
 </template>
@@ -17,33 +31,20 @@
 export default {
   data () {
     return {
-      logoClasses: [
-        'p-3'
-      ],
-      profileImageClasses: [
-        'img-fluid',
-        'rounded-circle',
-        'border',
-        'border-danger'
-      ],
-      headingClasses: [
-        'h1',
-        'mb-2',
-        'mt-3'
-      ],
-      subheadingClasses: [
-        'h5'
-      ],
-      imgUrl: require('../../assets/images/profile.jpeg'),
-      imgAlt: 'Profile picture of Benjamin Garcia, Full Stack Web Developer'
+      imgSrc: require('../../assets/images/profile.jpeg'),
+      imgAlt: 'Profile picture of Benjamin Garcia, Full Stack Web Developer',
+      name: 'Benjamin<br>Garcia',
+      title: 'Full Stack Developer',
+      emailAddr: 'ben@SeeBenProgram.com',
+      mailto: 'mailto:ben@SeeBenProgram.com?Subject=I%20want%20to%20hire%20you%21'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.border {
-  border-width: 8px !important;
+.profile-img {
+  border: 8px solid #f00;
 }
 small {
   font-size: 90%;

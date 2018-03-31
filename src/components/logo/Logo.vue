@@ -1,22 +1,32 @@
 <template>
+  <!-- Logo wrapper -->
   <div
     class="p-3"
   >
-    <img
-      :src="imgSrc"
-      :alt="imgAlt"
-      class="img-fluid rounded-circle profile-img"
+    <!-- Link wrapper for image -->
+    <router-link
+      to="{ name: 'Home'}"
     >
+      <!-- Profile picture -->
+      <img
+        :src="imgSrc"
+        :alt="imgAlt"
+        class="img-fluid rounded-circle profile-img"
+      >
+    </router-link>
+    <!-- Name -->
     <h2
       class="h1 mb-2 mt-3"
       v-html="name"
     >
     </h2>
+    <!-- Sub-title -->
     <span
       class="h5 border-bottom"
     >
       {{ title }}
     </span>
+    <!-- Email address -->
     <small>
       <a
         :href="mailto"

@@ -29,6 +29,7 @@
     <!-- Email address -->
     <small>
       <a
+        id="email-link"
         :href="mailto"
       >
         {{ emailAddr }}
@@ -63,7 +64,7 @@ a {
   text-decoration: none;
   color: initial;
 }
-a:hover {
+#email-link:hover {
   opacity: 0.7;
 }
 </style>

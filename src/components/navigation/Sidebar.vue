@@ -3,17 +3,10 @@
     <!-- Logo -->
     <Logo/>
     <ul :class="ulClasses">
-      <!-- Sidebar internal site links (using tag: <router-link>) -->
-      <SidebarLinkInternal
-        v-for="(link, id) in sidebarLinksInternal"
+      <!-- Sidebar links -->
+      <SidebarLinks
+        v-for="(link, id) in sidebarLinks"
         :key="id + '-internal'"
-        :link="link"
-        :css="css"
-      />
-      <!-- Sidebar external site links (using tag: <a>) -->
-      <SidebarLinkExternal
-        v-for="(link, id) in sidebarLinksExternal"
-        :key="id + '-external'"
         :link="link"
         :css="css"
       />
@@ -23,8 +16,7 @@
 
 <script>
 import Logo from '../logo/Logo'
-import SidebarLinkInternal from './SidebarLinkInternal'
-import SidebarLinkExternal from './SidebarLinkExternal'
+import SidebarLinks from './SidebarLinks'
 
 export default {
   data () {
@@ -80,17 +72,11 @@ export default {
   },
   components: {
     Logo,
-    SidebarLinkInternal,
-    SidebarLinkExternal
+    SidebarLinks
   },
   computed: {
-    // These are the sidebar links for internal site navigation
-    sidebarLinksInternal () {
-      return this.$store.getters['navigation/getNavigationLinksInternal']
-    },
-    // These are the sidebar links for external site navigation
-    sidebarLinksExternal () {
-      return this.$store.getters['navigation/getNavigationLinksExternal']
+    sidebarLinks () {
+      return this.$store.getters['navigation/getNavigationLinks']
     }
   }
 }

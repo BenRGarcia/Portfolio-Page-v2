@@ -1,6 +1,6 @@
 
 const state = {
-  _navigationLinksInternal: [
+  _navigationLinks: [
     {
       name: 'Home',
       routerLink: 'Home',
@@ -15,9 +15,7 @@ const state = {
       name: 'R&eacute;sum&eacute;',
       routerLink: 'Resume',
       icon: 'insert_drive_file'
-    }
-  ],
-  _navigationLinksExternal: [
+    },
     {
       name: 'Contact',
       href: 'mailto:ben@SeeBenProgram.com?Subject=I%20want%20to%20hire%20you%21',
@@ -33,8 +31,7 @@ const state = {
 }
 
 const getters = {
-  getNavigationLinksInternal: state => state._navigationLinksInternal,
-  getNavigationLinksExternal: state => state._navigationLinksExternal
+  getNavigationLinks: state => state._navigationLinks
 }
 
 export default {

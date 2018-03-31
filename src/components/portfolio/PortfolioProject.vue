@@ -2,14 +2,14 @@
   <div><!-- Don't delete this div, CSS grid/col received from parent component-->
     <!-- Bootstrap v4 Card -->
     <div
-      class="card mb-4"
+      class="card mb-4 card-box-shadow"
     >
       <!-- Card image header -->
       <div
-        :style="css.style.imgWrapper"
+        class="img-wrapper"
       >
         <img
-          class="card-img-top"
+          class="card-img-top img-bg-color"
           :src="project.src"
           :alt="imgAlt"
         >
@@ -30,7 +30,7 @@
         </p>
         <!-- Link to Project-Specific GitHub Repo -->
         <div
-          :style="css.style.linkWrapper"
+          class="link-wrapper"
         >
           <a
             :href="project.href"
@@ -51,33 +51,27 @@ export default {
   ],
   data () {
     return {
-      imgAlt: 'Portfolio Project Cover Image',
-      css: {
-        style: {
-          /* Uniform height of card image header */
-          imgWrapper: {
-            height: '200px',
-            overflow: 'hidden'
-          },
-          /* Position Link Button */
-          linkWrapper: {
-            position: 'absolute',
-            top: 0,
-            right: '6px'
-          }
-        }
-      }
+      imgAlt: 'Portfolio Project Image Header'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-img {
-  background-color: rgba(0, 0, 0, 0.1)
-}
-.card {
+.card-box-shadow {
   box-shadow: 1px 5px 5px 0 rgba(0,0,0,0.08),
               2px 5px 8px 0 rgba(0,0,0,0.10);
+}
+.img-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+.img-bg-color {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+.link-wrapper {
+  position: absolute;
+  top: 0;
+  right: 6px;
 }
 </style>

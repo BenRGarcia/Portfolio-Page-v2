@@ -92,8 +92,6 @@ export default {
 <style lang="scss" scoped>
 a {
   color: initial;
-  line-height: 1.0;
-  font-size: 1.1rem;
   text-decoration: none;
 }
 a:hover {

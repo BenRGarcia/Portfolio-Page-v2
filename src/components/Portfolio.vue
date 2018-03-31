@@ -1,18 +1,36 @@
 <template>
-  <!-- Portfolio Project Section -->
-  <div
-    class="container"
-  >
+  <div>
     <div
       class="row"
     >
-      <!-- Projects Append Here -->
-      <PortfolioProject
-        v-for="(project, index) in projects"
-        :key="index"
-        :project="project"
-        :class="css.class.grid"
-      />
+      <div class="col-12 px-0">
+        <div
+          :style="cssChildBanner"
+          :class="hideOnSmall"
+        >
+          <h1
+            class="mb-0"
+          >
+            Portfolio
+          </h1>
+        </div>
+      </div>
+    </div>
+      <!-- Portfolio Project Section -->
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+        <!-- Projects Append Here -->
+        <PortfolioProject
+          v-for="(project, index) in projects"
+          :key="index"
+          :project="project"
+          :class="css.class.grid"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -21,6 +39,10 @@
 import PortfolioProject from './portfolio/PortfolioProject'
 
 export default {
+  props: [
+    'cssChildBanner',
+    'hideOnSmall'
+  ],
   data () {
     return {
       css: {

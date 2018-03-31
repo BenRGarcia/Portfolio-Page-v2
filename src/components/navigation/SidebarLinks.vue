@@ -95,6 +95,10 @@ a {
   color: initial;
   text-decoration: none;
 }
+a:hover {
+  color: initial;
+  text-decoration: none;
+}
 li:hover {
   background-color: #ddd;
 }

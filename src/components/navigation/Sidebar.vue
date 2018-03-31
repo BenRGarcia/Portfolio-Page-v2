@@ -4,6 +4,7 @@
   >
     <!-- Logo -->
     <Logo/>
+    <!-- Sidebar link list -->
     <ul
       :class="ulClasses"
     >

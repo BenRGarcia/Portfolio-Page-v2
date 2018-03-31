@@ -1,16 +1,16 @@
 <template>
   <div>
-    <router-link
-      tag='li'
-      :to="{ name: link.routerLink }"
+    <li
+      v-if="link.routerLink"
       class="nav-item pl-2"
     >
-      <a
+      <router-link
+        :to="{ name: link.routerLink }"
         class="nav-link d-inline-block"
         v-html="link.name"
       >
-      </a>
-    </router-link>
+      </router-link>
+    </li>
   </div>
 </template>
 
@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.router-link-active {
+  color: #fff !important;
+}
 </style>

@@ -58,6 +58,7 @@ export default {
   ],
   data () {
     return {
+      /* Bootstrap CSS Classes for both 'v-if' & 'v-else' component */
       css: {
         class: {
           li: [

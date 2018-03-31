@@ -1,6 +1,7 @@
 
 const state = {
   _navigationLinks: [
+    /* Internal navigation links */
     {
       name: 'Home',
       routerLink: 'Home',
@@ -16,6 +17,7 @@ const state = {
       routerLink: 'Resume',
       icon: 'insert_drive_file'
     },
+    /* External navigation links */
     {
       name: 'Contact',
       href: 'mailto:ben@SeeBenProgram.com?Subject=I%20want%20to%20hire%20you%21',

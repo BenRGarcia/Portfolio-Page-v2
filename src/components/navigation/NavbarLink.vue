@@ -3,10 +3,10 @@
     <router-link
       tag='li'
       :to="{ name: link.routerLink }"
-      :class="itemClasses"
+      class="nav-item pl-2"
     >
       <a
-        :class="linkClasses"
+        class="nav-link d-inline-block"
         v-html="link.name"
       >
       </a>
@@ -18,20 +18,7 @@
 export default {
   props: [
     'link'
-  ],
-  data () {
-    return {
-      itemClasses: [
-        'nav-item',
-        'pl-2',
-        'active'
-      ],
-      linkClasses: [
-        'nav-link',
-        'd-inline-block'
-      ]
-    }
-  }
+  ]
 }
 </script>
 

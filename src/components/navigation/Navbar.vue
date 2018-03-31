@@ -83,7 +83,7 @@ export default {
   },
   computed: {
     navbarItems () {
-      return this.$store.getters['navigation/getNavigationLinksInternal']
+      return this.$store.getters['navigation/getNavigationLinks']
     }
   }
 }
